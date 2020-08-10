@@ -6,9 +6,9 @@ export const DrinkSchema = new mongoose.Schema( {
   categoryId: { type: String, required: true },
   type: { type: String, required: true },
   price: { type: Number, required: true },
-  imageURLHot: { type: String, required: true },
-  imageURLIce: { type: String, required: true },
-  imageURLFrappe: { type: String, required: true },
+  imageURLHot: { type: String, required: false },
+  imageURLIce: { type: String, required: false },
+  imageURLFrappe: { type: String, required: false },
 })
 
 export interface DrinkModel extends  mongoose.Document {

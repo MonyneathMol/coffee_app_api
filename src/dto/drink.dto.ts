@@ -1,6 +1,6 @@
 export class CreateDrinkDto {
   categoryId: string;
-  brandID: string;
+  brandId: string;
   name: string;
   type: number;
   price: number;

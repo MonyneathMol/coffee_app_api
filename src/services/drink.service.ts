@@ -16,7 +16,7 @@ export class DrinkService {
     const newDrink = new this.drinkModel(
       {
         name: drinkDto.name,
-        brandId: drinkDto.brandID,
+        brandId: drinkDto.brandId,
         categoryId: drinkDto.categoryId,
         type: drinkDto.type,
         price: drinkDto.price,

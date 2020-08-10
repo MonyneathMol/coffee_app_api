@@ -1,10 +1,9 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document } from 'mongoose';
-@Schema()
-export class BrandModel extends Document {
-  @Prop()
+
+import * as mongoose from 'mongoose';
+export const BrandSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+});
+export class BrandModel extends mongoose.Document {
   id: string;
-  @Prop()
   name: string;
 }
-export const BrandSchema = SchemaFactory.createForClass(BrandModel);
