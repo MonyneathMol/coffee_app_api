@@ -11,8 +11,12 @@ export class CategoryService {
 
   constructor(@InjectModel('CategoryModel') private categoryModel: Model<CategoryModel>) {
   }
-  async getListCategory(): Promise<BrandModel[]> {
+  async getListCategory(): Promise<CategoryModel[]> {
     return this.categoryModel.find().exec();
+  }
+
+  async getCategoryByID(id: string): Promise<CategoryModel> {
+  return this.categoryModel.findById(id).findOne();
   }
 
   async addCategory(categoryDto: CategoryDto): Promise<CategoryDto> {
